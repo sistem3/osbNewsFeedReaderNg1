@@ -1,10 +1,24 @@
 {
   "name": "ngNewsFeedReader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Ben Burton <sistematic3@yahoo.co.uk>"
   ],
   "description": "Angular JS Directive for displaying RSS feeds",
+  "dependencies": {
+    "angular": ">=1.2.*",
+    "json3": "~3.3.1",
+    "es5-shim": "~3.0.1",
+    "jquery": "~1.11.0",
+    "bootstrap-sass-official": "~3.1.1",
+    "bootstrap": "~3.1.1",
+    "angular-resource": ">=1.2.*",
+    "angular-cookies": ">=1.2.*",
+    "angular-sanitize": ">=1.2.*",
+    "font-awesome": ">=4.1.0",
+    "lodash": "~2.4.1",
+    "angular-xml": "~2.0.1"
+  },
   "main": [
     "./dist/newsFeedReader.directive.js",
     "./dist/newsFeedReaderTemplate.js",
