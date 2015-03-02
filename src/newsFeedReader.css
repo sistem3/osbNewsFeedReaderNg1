@@ -1,0 +1,60 @@
+.newsFeed {
+  position: relative;
+  background: #DEDEDE;
+  padding: 0 10px; }
+  .newsFeed > header {
+    min-height: 40px; }
+    .newsFeed > header > h1 {
+      margin-top: 10px; }
+    .newsFeed > header > button {
+      margin-top: 10px; }
+  .newsFeed > article {
+    width: 100%;
+    height: auto;
+    min-height: 103px;
+    padding: 10px 10px 10px 0;
+    clear: both;
+    background: #FFF;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #999;
+    border-right: 2px solid #999; }
+  .newsFeed__thumbnail {
+    min-width: 100px;
+    height: auto;
+    position: relative;
+    display: block;
+    float: left; }
+    .newsFeed__thumbnail > img {
+      vertical-align: top;
+      border-right: 4px solid #FF1F1F; }
+  .newsFeed__content {
+    width: 80%;
+    height: auto;
+    display: block;
+    float: left;
+    margin-left: 10px; }
+    .newsFeed__content > h2 {
+      font-size: 24px;
+      margin-top: 0px;
+      text-overflow: ellipsis; }
+    .newsFeed__content > p {
+      width: 100%;
+      margin-bottom: 5px;
+      widows: 3;
+      text-overflow: ellipsis; }
+    .newsFeed__content > p:last-child {
+      margin-bottom: 0; }
+    .newsFeed__content > p table {
+      display: none; }
+  .newsFeed__selector {
+    margin-bottom: 20px;
+    margin-left: 0;
+    padding-left: 0; }
+  .newsFeed__loading {
+    width: 120px;
+    margin: 20px auto;
+    padding-bottom: 20px; }
+    .newsFeed__loading > i {
+      font-size: 24px; }
+
+/*# sourceMappingURL=newsFeedReader.css.map */

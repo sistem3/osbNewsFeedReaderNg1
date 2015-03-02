@@ -1,0 +1,30 @@
+{
+  "name": "ngNewsFeedReader",
+  "version": "0.0.1",
+  "authors": [
+    "Ben Burton <sistematic3@yahoo.co.uk>"
+  ],
+  "description": "Angular JS Directive for displaying RSS feeds",
+  "main": [
+    "./dist/newsFeedReader.directive.js",
+    "./dist/newsFeedReaderTemplate.js",
+    "./dist/newsFeedReader.css",
+    "./dist/newsFeedReader.css.map"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "angular",
+    "js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".gitignore",
+    "Gruntfile.js",
+    "*.json",
+    "*.md",
+    "/src/*",
+    "/node_modules/*"
+  ]
+}

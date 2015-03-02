@@ -1,0 +1,32 @@
+<section class="newsFeed">
+    <header>
+        <h1 class="pull-left">News <i class="fa fa-newspaper-o"></i></h1>
+        <button class="btn btn-default pull-right" ng-click="newsFeed.getFeed(newsFeed.feed)">
+            <i class="fa fa-refresh"></i> Refresh
+        </button>
+        <div class="clearfix"></div>
+        <div class="newsFeed__selector col-md-6 form-inline">
+            <select class="form-control" ng-model="topFeedList" ng-options="topFeed.name for topFeed in newsFeed.topFeeds" ng-change="newsFeed.checkFeeds(topFeedList.feeds)"></select>
+            <select class="form-control" ng-model="topFeedListSecondary" ng-options="topFeed.title for topFeed in newsFeed.topFeeds.secondary" ng-show="newsFeed.topFeeds.secondary"></select>
+            <button class="btn btn-primary form-group" ng-click="newsFeed.getFeed(topFeedListSecondary.url)">Go <i class="fa fa-chevron-right"></i></button>
+        </div>
+    </header>
+    <article ng-repeat="articles in newsFeed.news.item" ng-show="!newsFeed.loading">
+        <div class="newsFeed__thumbnail" ng-if="articles.thumbnail[1]._url">
+            <img ng-src="{{articles.thumbnail[1]._url}}" alt="{{articles.title}}" />
+        </div>
+        <div class="newsFeed__thumbnail" ng-if="articles.thumbnail._url">
+            <img ng-src="{{articles.thumbnail._url}}" alt="{{articles.title}}" />
+        </div>
+        <div class="newsFeed__content">
+            <h2 ng-bind="articles.title"></h2>
+            <p class="hidden-xs" ng-bind-html="articles.description"></p>
+            <small>Published: <span ng-bind-html="articles.pubDate | date:'medium'"></span> | Source: <span ng-bind="newsFeed.news.title"></span> | <a href="{{articles.link}}">Link <i class="fa fa-external-link"></i></a></small>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+    <div class="newsFeed__loading" ng-show="newsFeed.loading">
+        <i class="fa fa-spinner fa-spin"></i>
+        <p>Loading...</p>
+    </div>
+</section>
