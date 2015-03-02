@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sistem3.news-feed-reader', ['templates-main'])
+angular.module('sistem3.news-feed-reader', ['news-feed-template'])
   .directive('newsFeedReader', ['$http', function ($http) {
     return {
       templateUrl: 'newsFeedReader.tpl.html',

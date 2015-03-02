@@ -1,4 +1,4 @@
-angular.module('templates-main', ['newsFeedReader.tpl.html']);
+angular.module('news-feed-template', ['newsFeedReader.tpl.html']);
 
 angular.module("newsFeedReader.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("newsFeedReader.tpl.html",
