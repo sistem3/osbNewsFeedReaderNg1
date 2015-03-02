@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('oneStepBeyondApp', ['templates-main'])
+angular.module('sistem3.news-feed-reader', ['templates-main'])
   .directive('newsFeedReader', ['$http', function ($http) {
     return {
       templateUrl: 'newsFeedReader.tpl.html',
