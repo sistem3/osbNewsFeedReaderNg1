@@ -6,12 +6,14 @@
         </button>
         <div class="clearfix"></div>
         <div class="newsFeed__selector col-md-6 form-inline">
-            <select class="form-control" ng-model="topFeedList" ng-options="topFeed.name for topFeed in newsFeed.topFeeds" ng-change="newsFeed.checkFeeds(topFeedList.feeds)"></select>
-            <select class="form-control" ng-model="topFeedListSecondary" ng-options="topFeed.title for topFeed in newsFeed.topFeeds.secondary" ng-show="newsFeed.topFeeds.secondary"></select>
-            <button class="btn btn-primary form-group" ng-click="newsFeed.getFeed(topFeedListSecondary.url)">Go <i class="fa fa-chevron-right"></i></button>
+            <select class="form-control" ng-model="topFeedsList" ng-options="topFeed.name for topFeed in newsFeed.topFeeds" ng-change="newsFeed.checkFeeds(topFeedsList.feeds)"></select>
+            <select class="form-control" ng-model="topFeedsListSecondary" ng-options="topFeed.title for topFeed in newsFeed.topFeeds.secondary" ng-show="newsFeed.topFeeds.secondary"></select>
+            <button class="btn btn-primary form-group" ng-click="newsFeed.getFeed(topFeedsListSecondary.url)">Go <i class="fa fa-chevron-right"></i></button>
         </div>
+        <div class="clearfix"></div>
+        <h4 ng-if="newsFeed.news.title">Powered by <span ng-bind="newsFeed.news.title"></span></h4>
     </header>
-    <article ng-repeat="articles in newsFeed.news.item" ng-show="!newsFeed.loading">
+    <article ng-repeat="articles in newsFeed.news.entries" ng-show="!newsFeed.loading">
         <div class="newsFeed__thumbnail" ng-if="articles.thumbnail[1]._url">
             <img ng-src="{{articles.thumbnail[1]._url}}" alt="{{articles.title}}" />
         </div>
@@ -20,9 +22,10 @@
         </div>
         <div class="newsFeed__content">
             <h2 ng-bind="articles.title"></h2>
-            <p class="hidden-xs" ng-bind-html="articles.description"></p>
-            <small>Published: <span ng-bind-html="articles.pubDate | date:'medium'"></span> | Source: <span ng-bind="newsFeed.news.title"></span> | <a href="{{articles.link}}">Link <i class="fa fa-external-link"></i></a></small>
+            <p class="hidden-xs" ng-bind-html="articles.content" ng-if="articles.content"></p>
+            <small>Published: <span ng-bind-html="articles.publishedDate | date:'medium'"></span> | Source: <span ng-bind="newsFeed.news.title"></span></small>
         </div>
+        <a href="{{articles.link}}" class="main--link" target="_blank"><i class="fa fa-chevron-right"></i></a>
         <div class="clearfix"></div>
     </article>
     <div class="newsFeed__loading" ng-show="newsFeed.loading">
