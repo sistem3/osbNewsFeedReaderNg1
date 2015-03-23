@@ -1,6 +1,6 @@
 .newsFeed {
   position: relative;
-  background: #DEDEDE;
+  background: #F0F0F0;
   padding: 0 10px; }
   .newsFeed > header {
     min-height: 40px; }
@@ -22,7 +22,7 @@
     .newsFeed > article > .main--link {
       width: 50px;
       height: 100%;
-      background: #ccc;
+      background: #B3B3B3;
       position: absolute;
       top: 0;
       right: 0; }
@@ -36,6 +36,8 @@
         top: 50%;
         margin-left: -8px;
         margin-top: -10px; }
+    .newsFeed > article > .main--link:hover {
+      background: #9C9C9C; }
   .newsFeed__thumbnail {
     min-width: 100px;
     height: auto;

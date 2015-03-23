@@ -10,8 +10,12 @@ angular.module("newsFeedReader.tpl.html", []).run(["$templateCache", function($t
     "        </button>\n" +
     "        <div class=\"clearfix\"></div>\n" +
     "        <div class=\"newsFeed__selector col-md-6 form-inline\">\n" +
-    "            <select class=\"form-control\" ng-model=\"topFeedsList\" ng-options=\"topFeed.name for topFeed in newsFeed.topFeeds\" ng-change=\"newsFeed.checkFeeds(topFeedsList.feeds)\"></select>\n" +
-    "            <select class=\"form-control\" ng-model=\"topFeedsListSecondary\" ng-options=\"topFeed.title for topFeed in newsFeed.topFeeds.secondary\" ng-show=\"newsFeed.topFeeds.secondary\"></select>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <select class=\"form-control\" ng-model=\"topFeedsList\" ng-options=\"topFeed.name for topFeed in newsFeed.topFeeds\" ng-change=\"newsFeed.checkFeeds(topFeedsList.feeds)\"></select>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <select class=\"form-control\" ng-model=\"topFeedsListSecondary\" ng-options=\"topFeed.title for topFeed in newsFeed.topFeeds.secondary\" ng-show=\"newsFeed.topFeeds.secondary\"></select>\n" +
+    "            </div>\n" +
     "            <button class=\"btn btn-primary form-group\" ng-click=\"newsFeed.getFeed(topFeedsListSecondary.url)\">Go <i class=\"fa fa-chevron-right\"></i></button>\n" +
     "        </div>\n" +
     "        <div class=\"clearfix\"></div>\n" +

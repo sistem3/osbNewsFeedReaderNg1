@@ -6,8 +6,12 @@
         </button>
         <div class="clearfix"></div>
         <div class="newsFeed__selector col-md-6 form-inline">
-            <select class="form-control" ng-model="topFeedsList" ng-options="topFeed.name for topFeed in newsFeed.topFeeds" ng-change="newsFeed.checkFeeds(topFeedsList.feeds)"></select>
-            <select class="form-control" ng-model="topFeedsListSecondary" ng-options="topFeed.title for topFeed in newsFeed.topFeeds.secondary" ng-show="newsFeed.topFeeds.secondary"></select>
+            <div class="form-group">
+                <select class="form-control" ng-model="topFeedsList" ng-options="topFeed.name for topFeed in newsFeed.topFeeds" ng-change="newsFeed.checkFeeds(topFeedsList.feeds)"></select>
+            </div>
+            <div class="form-group">
+                <select class="form-control" ng-model="topFeedsListSecondary" ng-options="topFeed.title for topFeed in newsFeed.topFeeds.secondary" ng-show="newsFeed.topFeeds.secondary"></select>
+            </div>
             <button class="btn btn-primary form-group" ng-click="newsFeed.getFeed(topFeedsListSecondary.url)">Go <i class="fa fa-chevron-right"></i></button>
         </div>
         <div class="clearfix"></div>
