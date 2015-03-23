@@ -11,7 +11,7 @@ module.exports = function (grunt) {
       main: {
         src: ['src/**/*.tpl.html'],
         dest: 'src/newsFeedReaderTemplate.js'
-      },
+      }
     }
   });
 
