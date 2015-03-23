@@ -1,6 +1,6 @@
 {
   "name":"ngNewsFeedReader",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "devDependencies": {
     "grunt": "~0.4.4",
     "grunt-html2js": "^0.2.7"
