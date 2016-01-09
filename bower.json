@@ -10,7 +10,8 @@
     "bootstrap-sass-official": "~3.1.1",
     "bootstrap": "~3.1.1",
     "font-awesome": ">=4.1.0",
-    "angular-xml": "~2.0.1"
+    "angular-xml": "~2.0.1",
+    "angular-sanitize": "~1.4.8"
   },
   "main": [
     "./dist/osbNewsFeedReader.directive.js",

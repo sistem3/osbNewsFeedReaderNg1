@@ -26,6 +26,7 @@
 </div>
 
 <script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 <!-- Src Test -->
 <script src="src/osbNewsFeedReader.directive.js"></script>
 <script src="src/osbNewsFeedReaderTemplate.js"></script>
@@ -34,7 +35,7 @@
 <script src="dist/src/osbNewsFeedReaderTemplate.js"></script>-->
 <script>
     'use strict';
-    angular.module('osbNewsFeedDemo', ['sistem3.osb-news-feed-reader']);
+    angular.module('osbNewsFeedDemo', ['ngSanitize', 'sistem3.osb-news-feed-reader']);
 </script>
 </body>
 
