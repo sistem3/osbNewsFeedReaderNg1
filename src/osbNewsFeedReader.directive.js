@@ -24,9 +24,7 @@ angular.module('sistem3.osb-news-feed-reader', ['osb-news-feed-template'])
         $scope.newsFeed.getFeed = function(feedUrl) {
           $scope.newsFeed.feed = feedUrl;
           $scope.newsFeed.loading = true;
-          console.log(feedUrl);
           feedReader.parseFeed(feedUrl).then(function(data) {
-            console.log(data);
             $scope.newsFeed.news = [];
             $scope.newsFeed.news = data.data.responseData.feed;
             $scope.newsFeed.loading = false;
