@@ -10,12 +10,15 @@ module.exports = function (grunt) {
       },
       main: {
         src: ['src/**/*.tpl.html'],
-        dest: 'src/newsFeedReaderTemplate.js'
+        dest: 'src/osbNewsFeedReaderTemplate.js'
       }
     }
   });
 
-  grunt.registerTask('default', [
-    'html2js'
-  ]);
+  grunt.loadNpmTasks('grunt-html2js');
+  grunt.loadNpmTasks('grunt-serve');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.registerTask('default', ['serve']);
+  grunt.registerTask('template', ['html2js']);
 };
