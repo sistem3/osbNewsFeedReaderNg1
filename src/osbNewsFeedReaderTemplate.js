@@ -31,7 +31,7 @@ angular.module("osbNewsFeedReader.tpl.html", []).run(["$templateCache", function
     "        <div class=\"newsFeed__content\">\n" +
     "            <h2 ng-bind=\"articles.title\"></h2>\n" +
     "            <p class=\"hidden-xs\" ng-bind-html=\"articles.content\" ng-if=\"articles.content\"></p>\n" +
-    "            <small>Published: <span ng-bind-html=\"articles.publishedDate | date:'medium'\"></span> | Source: <span ng-bind=\"newsFeed.news.title\"></span></small>\n" +
+    "            <small>Published: <span ng-bind-html=\"articles.publishedDate.slice(0, 17) | date:'medium'\"></span> | Source: <span ng-bind=\"newsFeed.news.title\"></span></small>\n" +
     "        </div>\n" +
     "        <a href=\"{{articles.link}}\" class=\"main--link\" target=\"_blank\"><i class=\"fa fa-chevron-right\"></i></a>\n" +
     "        <div class=\"clearfix\"></div>\n" +

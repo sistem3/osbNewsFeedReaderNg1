@@ -27,7 +27,7 @@
         <div class="newsFeed__content">
             <h2 ng-bind="articles.title"></h2>
             <p class="hidden-xs" ng-bind-html="articles.content" ng-if="articles.content"></p>
-            <small>Published: <span ng-bind-html="articles.publishedDate | date:'medium'"></span> | Source: <span ng-bind="newsFeed.news.title"></span></small>
+            <small>Published: <span ng-bind-html="articles.publishedDate.slice(0, 17) | date:'medium'"></span> | Source: <span ng-bind="newsFeed.news.title"></span></small>
         </div>
         <a href="{{articles.link}}" class="main--link" target="_blank"><i class="fa fa-chevron-right"></i></a>
         <div class="clearfix"></div>
