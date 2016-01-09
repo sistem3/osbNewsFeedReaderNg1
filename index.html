@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="osbNewsFeedDemo">
+<head>
+    <title>OSB News Feed Reader</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+    <!-- Src Test -->
+    <link rel="stylesheet" href="src/osbNewsFeedReader.css">
+    <!-- Dist Test -->
+    <!--<link rel="stylesheet" href="dist/osbGeoWeather.css">-->
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div ng-view>
+    <osb-news-feed-reader feed-url="http://feeds.bbci.co.uk/news/technology/rss.xml?edition=uk"></osb-news-feed-reader>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<!-- Src Test -->
+<script src="src/osbNewsFeedReader.directive.js"></script>
+<script src="src/osbNewsFeedReaderTemplate.js"></script>
+<!-- Dist Test -->
+<!--<script src="dist/osbNewsFeedReader.directive.js"></script>
+<script src="dist/src/osbNewsFeedReaderTemplate.js"></script>-->
+<script>
+    'use strict';
+    angular.module('osbNewsFeedDemo', ['sistem3.osb-news-feed-reader']);
+</script>
+</body>
+
+</html>
