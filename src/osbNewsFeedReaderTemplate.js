@@ -1,7 +1,7 @@
-angular.module('news-feed-template', ['newsFeedReader.tpl.html']);
+angular.module('osb-news-feed-template', ['osbNewsFeedReader.tpl.html']);
 
-angular.module("newsFeedReader.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("newsFeedReader.tpl.html",
+angular.module("osbNewsFeedReader.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("osbNewsFeedReader.tpl.html",
     "<section class=\"newsFeed\">\n" +
     "    <header>\n" +
     "        <h1 class=\"pull-left\">News <i class=\"fa fa-newspaper-o\"></i></h1>\n" +

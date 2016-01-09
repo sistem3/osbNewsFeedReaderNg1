@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sistem3.news-feed-reader', ['news-feed-template'])
+angular.module('sistem3.osb-news-feed-reader', ['osb-news-feed-template'])
   .factory('feedReader', function($http) {
     return {
       parseFeed : function(url){
@@ -8,9 +8,9 @@ angular.module('sistem3.news-feed-reader', ['news-feed-template'])
       }
     }
   })
-  .directive('newsFeedReader', ['$http', '$q', 'feedReader', function ($http, $q, feedReader) {
+  .directive('osbNewsFeedReader', ['$http', '$q', 'feedReader', function ($http, $q, feedReader) {
     return {
-      templateUrl: 'newsFeedReader.tpl.html',
+      templateUrl: 'osbNewsFeedReader.tpl.html',
       restrict: 'EA',
       link: function ($scope, element, attrs) {
         //console.log("News feed reader added");
@@ -24,7 +24,9 @@ angular.module('sistem3.news-feed-reader', ['news-feed-template'])
         $scope.newsFeed.getFeed = function(feedUrl) {
           $scope.newsFeed.feed = feedUrl;
           $scope.newsFeed.loading = true;
+          console.log(feedUrl);
           feedReader.parseFeed(feedUrl).then(function(data) {
+            console.log(data);
             $scope.newsFeed.news = [];
             $scope.newsFeed.news = data.data.responseData.feed;
             $scope.newsFeed.loading = false;
