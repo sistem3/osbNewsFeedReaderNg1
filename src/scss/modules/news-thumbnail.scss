@@ -1,0 +1,12 @@
+.newsFeed__thumbnail {
+  min-width: 100px;
+  height: auto;
+  position: relative;
+  display: block;
+  float: left;
+
+  > img {
+    vertical-align: top;
+    border-right: 4px solid #FF1F1F;
+  }
+}

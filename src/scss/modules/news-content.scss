@@ -1,0 +1,28 @@
+.newsFeed__content {
+  width: 80%;
+  height: auto;
+  display: block;
+  float: left;
+  margin-left: 10px;
+
+  > h2 {
+    font-size: 24px;
+    margin-top: 0;
+    text-overflow: ellipsis;
+  }
+
+  > p {
+    width: 100%;
+    margin-bottom: 5px;
+    widows: 3;
+    text-overflow: ellipsis;
+  }
+
+  > p:last-child {
+    margin-bottom: 0;
+  }
+
+  > p table {
+    display: none;
+  }
+}
