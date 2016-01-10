@@ -8,7 +8,7 @@ module.exports = function (grunt) {
       },
       main: {
         src: ['src/**/*.tpl.html'],
-        dest: 'src/osbNewsFeedReaderTemplate.js'
+        dest: 'src/osbNewsFeedReader.directive.tpl.js'
       }
     },
     sass: {
