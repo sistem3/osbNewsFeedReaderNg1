@@ -14,10 +14,8 @@
     "angular-sanitize": "~1.4.8"
   },
   "main": [
-    "./dist/osbNewsFeedReader.directive.js",
     "./dist/osbNewsFeedReader.js",
-    "./dist/osbNewsFeedReader.css",
-    "./dist/osbNewsFeedReader.css.map"
+    "./dist/osbNewsFeedReader.css"
   ],
   "moduleType": [
     "node"
